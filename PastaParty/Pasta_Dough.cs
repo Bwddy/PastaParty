@@ -14,7 +14,7 @@ namespace KitchenMyMod
     {
         public override string UniqueNameID => "Pasta_Dough";
 
-        public override GameObject Prefab => TestCubeManager.GetPrefab("Pasta_Dough");
+        public override GameObject Prefab => TestCubeManager.GetPrefab("Pasta_Dough", 0.2f, 0.2f, 0.2f);
         public override List<ItemSet> Sets => new List<ItemSet>
         {
         new ItemSet
