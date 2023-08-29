@@ -1,7 +1,7 @@
 ﻿using KitchenLib;
 using KitchenLib.Event;
 using KitchenMods;
-using PastaParty;
+using PastaParty.Customs;
 using System.Reflection;
 using UnityEngine;
 
@@ -41,15 +41,15 @@ namespace KitchenMyMod
         private void AddGameData()
         {
             LogInfo("Attempting to register game data...");
-            
+
             AddGameDataObject<Semolina>();
-            LogInfo("Done loading Semolina.");
             AddGameDataObject<SemolinaProvider>();
-            LogInfo("Done loading SemolinaProvider.");
             AddGameDataObject<Pasta_Dough>();
-            LogInfo("Done loading Pasta_Dough.");
             AddGameDataObject<Pasta_Dough_Rolled>();
-            LogInfo("Done loading Pasta_Dough_Rolled.");
+            AddGameDataObject<Ricotta>();
+            AddGameDataObject<RicottaProvider>();
+            AddGameDataObject<Ravioli>();
+            AddGameDataObject<Unrolled_Ravioli>();
 
             LogInfo("Done loading game data.");
         }

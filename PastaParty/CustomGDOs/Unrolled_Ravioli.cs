@@ -13,11 +13,11 @@ namespace PastaParty
 {
     namespace Customs
     {
-        public class Pasta_Dough : CustomItemGroup
+        public class Unrolled_Ravioli : CustomItemGroup
         {
-            public override string UniqueNameID => "Pasta_Dough";
+            public override string UniqueNameID => "Unrolled_Ravioli";
 
-            public override GameObject Prefab => TestCubeManager.GetPrefab("Pasta_Dough", 0.2f, 0.2f, 0.2f, MaterialUtils.GetExistingMaterial("Cheese - Pizza"));
+            public override GameObject Prefab => TestCubeManager.GetPrefab("Unrolled_Ravioli", 1f, 0.2f, 1f, MaterialUtils.GetExistingMaterial("Cheese - Pizza"));
             public override List<ItemSet> Sets => new List<ItemSet>
         {
         new ItemSet
@@ -26,8 +26,8 @@ namespace PastaParty
             Min = 2,
             Items = new List<Item>
             {
-                (Item)GDOUtils.GetCustomGameDataObject<UnmixedEggDough>().GameDataObject,
-                (Item)GDOUtils.GetCustomGameDataObject<Semolina>().GameDataObject
+                (Item)GDOUtils.GetCustomGameDataObject<Pasta_Dough_Rolled>().GameDataObject,
+                (Item)GDOUtils.GetCustomGameDataObject<Ricotta>().GameDataObject
             },
             IsMandatory = true
         }
@@ -39,7 +39,7 @@ namespace PastaParty
             Duration = 1f,
             IsBad = false,
             Process = (Process)GDOUtils.GetExistingGDO(ProcessReferences.Knead),
-            Result = (Item)GDOUtils.GetCustomGameDataObject<Pasta_Dough_Rolled>().GameDataObject
+            Result = (Item)GDOUtils.GetCustomGameDataObject<Ravioli>().GameDataObject
         }
         };
         }

@@ -6,12 +6,15 @@ using TestCubes;
 
 namespace PastaParty
 {
-    public class Semolina : CustomItem
+    namespace Customs
     {
-        public override string UniqueNameID => "Semolina";
+        public class Semolina : CustomItem
+        {
+            public override string UniqueNameID => "Semolina";
 
-        public override GameObject Prefab => TestCubeManager.GetPrefab("Semolina", 0.2f, 0.2f, 0.2f, MaterialUtils.GetExistingMaterial("Wood - Default"), false);
+            public override GameObject Prefab => TestCubeManager.GetPrefab("Semolina", 0.2f, 0.2f, 0.2f, MaterialUtils.GetExistingMaterial("Wood - Default"), false);
 
-        public override Appliance DedicatedProvider => (Appliance)GDOUtils.GetCustomGameDataObject<SemolinaProvider>().GameDataObject;
+            public override Appliance DedicatedProvider => (Appliance)GDOUtils.GetCustomGameDataObject<SemolinaProvider>().GameDataObject;
+        }
     }
 }

@@ -5,11 +5,14 @@ using KitchenLib.Utils;
 
 namespace PastaParty
 {
-    public class Pasta_Dough_Rolled : CustomItem
+    namespace Customs
     {
-        public override string UniqueNameID => "Pasta_Dough_Rolled";
-        
-        public override GameObject Prefab => TestCubeManager.GetPrefab("Pasta_Dough_Rolled", 0.2f, 0.2f, 0.2f, MaterialUtils.GetExistingMaterial("Lettuce"));
+        public class Pasta_Dough_Rolled : CustomItem
+        {
+            public override string UniqueNameID => "Pasta_Dough_Rolled";
 
+            public override GameObject Prefab => TestCubeManager.GetPrefab("Pasta_Dough_Rolled", 1f, 0.1f, 1f, MaterialUtils.GetExistingMaterial("Cheese - Pizza"));
+
+        }
     }
 }

@@ -85,6 +85,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomGDOs\Ravioli.cs" />
+    <Compile Include="CustomGDOs\Unrolled_Ravioli.cs" />
     <Compile Include="Mod.cs" />
     <Compile Include="CustomGDOs\Pasta_Dough.cs" />
     <Compile Include="CustomGDOs\Pasta_Dough_Rolled.cs" />
