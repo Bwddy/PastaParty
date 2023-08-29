@@ -7,26 +7,25 @@ using UnityEngine;
 using static KitchenData.ItemGroup;
 using KitchenLib.References;
 using TestCubes;
+using IngredientLib.Ingredient.Items;
 
-namespace KitchenMyMod
+namespace PastaParty
 {
     public class Pasta_Dough : CustomItemGroup
     {
         public override string UniqueNameID => "Pasta_Dough";
 
-        public override GameObject Prefab => TestCubeManager.GetPrefab("Pasta_Dough", 0.2f, 0.2f, 0.2f);
+        public override GameObject Prefab => TestCubeManager.GetPrefab("Pasta_Dough", 0.2f, 0.2f, 0.2f, MaterialUtils.GetExistingMaterial("Tomato"));
         public override List<ItemSet> Sets => new List<ItemSet>
         {
         new ItemSet
         {
-            Max = 3,
-            Min = 3,
+            Max = 2,
+            Min = 2,
             Items = new List<Item>
             {
-                (Item)GDOUtils.GetExistingGDO(ItemReferences.EggCracked),
-                (Item)GDOUtils.GetExistingGDO(ItemReferences.Flour),
+                (Item)GDOUtils.GetCustomGameDataObject<UnmixedEggDough>().GameDataObject,
                 (Item)GDOUtils.GetCustomGameDataObject<Semolina>().GameDataObject
-
             },
             IsMandatory = true
         }

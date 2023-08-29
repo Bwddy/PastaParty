@@ -5,13 +5,13 @@ using System.Collections.Generic;
 using TestCubes;
 using UnityEngine;
 
-namespace KitchenMyMod
+namespace PastaParty
 {
     public class SemolinaProvider : CustomAppliance
     {
         public override string UniqueNameID => "SemolinaProvider";
 
-        public override GameObject Prefab => TestCubeManager.GetPrefab("SemolinaProvider");
+        public override GameObject Prefab => TestCubeManager.GetPrefab("SemolinaProvider", 1, 1, 1, MaterialUtils.GetExistingMaterial("Wood - Default"));
 
         public override List<(Locale, ApplianceInfo)> InfoList => new List<(Locale, ApplianceInfo)> { ((Locale)1, new ApplianceInfo
     {
