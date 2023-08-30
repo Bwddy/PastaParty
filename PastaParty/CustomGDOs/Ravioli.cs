@@ -12,7 +12,7 @@ namespace PastaParty
             public override string UniqueNameID => "Ravioli";
 
             public override GameObject Prefab => TestCubeManager.GetPrefab("Ravioli", 0.2f, 0.2f, 0.2f, MaterialUtils.GetExistingMaterial("Cheese - Pizza"));
-
+            public override string ColourBlindTag => "R";
         }
     }
 }
