@@ -50,6 +50,9 @@ namespace KitchenMyMod
             AddGameDataObject<RicottaProvider>();
             AddGameDataObject<Ravioli>();
             AddGameDataObject<Unrolled_Ravioli>();
+            AddGameDataObject<Pappardelle>();
+            AddGameDataObject<Fettuccine>();
+            AddGameDataObject<Tagliatelle>();
 
             LogInfo("Done loading game data.");
         }
